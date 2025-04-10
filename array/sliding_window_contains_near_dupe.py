@@ -1,7 +1,6 @@
 class Solution:
     def containsNearbyDuplicate(self, nums: list[int], k: int) -> bool:
-        """Solução para detectar se um subarray de tamanho k possui números repetidos 
-        """
+        """Solução para detectar se um subarray de tamanho k possui números repetidos"""
         window = set() # cria um set para representar o sliding window
         L = 0 # inicia o ponteiro L no zero
 

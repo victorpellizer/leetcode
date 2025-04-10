@@ -16,11 +16,11 @@ def findMiddle(head):
 
 def mergeTwoLists(l1, l2):
     """Mescla duas listas ordenadas em uma"""
-    head = ListNode() # cria um nó vazio
-    tail = head # esse nó vazio também tem um tail apontando pra ele
+    head = ListNode()  # cria um nó vazio
+    tail = head  # esse nó vazio também tem um tail apontando pra ele
 
     while l1 and l2:
-        if l1.val < l2.val: # se o nó da Lista 1 é menor, ele que entra na fila ordenada
+        if l1.val < l2.val:  # se o nó da Lista 1 é menor, ele que entra na fila ordenada
             tail.next = l1
             l1 = l1.next
         else:
@@ -28,17 +28,17 @@ def mergeTwoLists(l1, l2):
             l2 = l2.next
         tail = tail.next
 
-    tail.next = l1 or l2 # depois que uma lista chegou ao fim, mescla a outra inteira no fim
+    tail.next = l1 or l2  # depois que uma lista chegou ao fim, mescla a outra inteira no fim
     return head.next
 
 
 def mergesort(head):
-    if not head or not head.next: # sem next significa que reduziu a lista a um único nó
+    if not head or not head.next:  # sem next significa que reduziu a lista a um único nó
         return head
 
-    middle = findMiddle(head) # encontra o meio
-    after_middle = middle.next # define o ínicio da lista da direita
-    middle.next = None # quebra a conexão entre a lista da direita e a da esquerda
+    middle = findMiddle(head)  # encontra o meio
+    after_middle = middle.next  # define o ínicio da lista da direita
+    middle.next = None  # quebra a conexão entre a lista da direita e a da esquerda
 
     # quebra as duas novas listas-metade recursivamente, até virarem um único nó
     left = mergesort(head)

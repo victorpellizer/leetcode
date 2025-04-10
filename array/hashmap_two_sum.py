@@ -1,5 +1,6 @@
 class Solution:
     def twoSum(self, nums: list[int], target: int) -> list[int]:
+        """Solução para obter o índice dos dois primeiros números em um array que se somados resultam target"""
         hmap = {} # cria um hashmap
         n = len(nums)
         for i in range(n): # itera pelo array uma vez
